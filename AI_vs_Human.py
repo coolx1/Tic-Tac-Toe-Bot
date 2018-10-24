@@ -215,9 +215,9 @@ if __name__ == "__main__":
     print("Enter input in the format row,column or row(space)column\nRows and columns start with 1")
     print(b)
     env = Environment(b)
-    qtablePickle = "Q_tablerc.pickle"
+    qtablePickle = "Q_table.pickle"
     agent = AI_bot(1,env,qtablePickle)
     playGame(env,agent)
-    pickle_out = open("Q_tablerc.pickle", "wb")
+    pickle_out = open("Q_table.pickle", "wb")
     pickle.dump(agent.Q_table, pickle_out)
     pickle_out.close()
